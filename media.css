@@ -1,0 +1,62 @@
+@media (min-width: 768px) and (max-width: 1199.98px) 
+{
+
+    body{width: 1200px;}
+
+    .con{
+    width: 1200px;}
+
+
+.head-image{background-image: url(./Images/header.png);
+background-size: cover;
+    background-position: center;
+    width: 420px;
+}
+
+.head-image .hh{font-size: 160px;
+letter-spacing: normal;
+margin-top: 0;
+font-family: coda;
+text-transform: uppercase;
+}
+
+ .head-image .p{font-size:20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.menu-section{display: flex;
+flex-direction: row;
+justify-content: space-between;
+padding: 0 50px;
+    align-items: center;
+}
+
+.about{width: 1200px;}
+
+.irregular{margin-left: 1000px;}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
