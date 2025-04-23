@@ -1,27 +1,25 @@
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('nav ul');
-const navLinks = document.querySelectorAll('nav ul li a');
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector("nav .mobile-menu");
+const navLinks = document.querySelectorAll("nav .mobile-menu li a");
 
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active');
-  navMenu.classList.toggle('active');
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
 });
 
-navLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    navMenu.classList.remove('active');
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
   });
 });
 
-window.addEventListener('resize', () => {
+window.addEventListener("resize", () => {
   if (window.innerWidth > 1024) {
-    hamburger.classList.remove('active');
-    navMenu.classList.remove('active');
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
   }
 });
-
-
 
 // magnetic-button
 const btn = document.querySelector(".mag-btn");
@@ -86,33 +84,33 @@ btn.addEventListener("mouseleave", () => {
 
 // stats-counter
 const section = document.querySelector("#stat"),
-        stats = document.querySelectorAll(".stat h1");
+  stats = document.querySelectorAll(".stat h1");
 
-      const animate = (el, target, suffix, duration = 2000) => {
-        let start = Date.now();
-        const update = () => {
-          const elapsed = Date.now() - start;
-          const progress = Math.min(elapsed / duration, 1);
-          el.textContent = Math.floor(progress * target) + suffix;
-          progress < 1 ? requestAnimationFrame(update) : null;
-        };
-        requestAnimationFrame(update);
-      };
+const animate = (el, target, suffix, duration = 2000) => {
+  let start = Date.now();
+  const update = () => {
+    const elapsed = Date.now() - start;
+    const progress = Math.min(elapsed / duration, 1);
+    el.textContent = Math.floor(progress * target) + suffix;
+    progress < 1 ? requestAnimationFrame(update) : null;
+  };
+  requestAnimationFrame(update);
+};
 
-      new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            stats.forEach((stat) => {
-              const original = stat.textContent;
-              const suffix = original.replace(/\d/g, "");
-              const target = parseInt(original) || 0;
-              stat.textContent = "0" + suffix;
-              animate(stat, target, suffix, 2000);
-            });
-          }
-        },
-        { threshold: 0.5 }
-      ).observe(section);
+new IntersectionObserver(
+  ([entry]) => {
+    if (entry.isIntersecting) {
+      stats.forEach((stat) => {
+        const original = stat.textContent;
+        const suffix = original.replace(/\d/g, "");
+        const target = parseInt(original) || 0;
+        stat.textContent = "0" + suffix;
+        animate(stat, target, suffix, 2000);
+      });
+    }
+  },
+  { threshold: 0.5 }
+).observe(section);
 
 // feature-slider
 document.addEventListener("DOMContentLoaded", () => {
