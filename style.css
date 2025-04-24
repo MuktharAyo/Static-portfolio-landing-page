@@ -37,8 +37,7 @@ header {
   background: rgb(20, 21, 25);
   box-shadow: 0 4px 4px rgb(0, 0, 0, 0.2);
   width: 100%;
-  position: fixed;
-  /* position: sticky; */
+  position: sticky;
   z-index: 999;
   top: 0;
 }
