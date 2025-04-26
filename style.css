@@ -557,7 +557,7 @@ nav .btn {
   /* min-height: 100vh;
   min-height: 100svh; */
   /* height: 100%; */
-  min-height: 600px;
+  /* min-height: 600px; */
   /* min-height: auto; */
   display: flex;
   flex-direction: column;
@@ -672,6 +672,7 @@ nav .btn {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+  position: relative;
 }
 .all-info {
   display: grid;
@@ -1491,3 +1492,5 @@ footer {
     justify-content: center;
   }
 }
+
+/* make the entire code given mobile responsive at max-screen:1024px, max-screen:768px, max-screen:480px and max-screen:320px respectively. note: run your code and ensure absolute flexibility and responsiveness */

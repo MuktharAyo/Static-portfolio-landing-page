@@ -342,9 +342,7 @@
   #services {
     padding: 80px 0;
   }
-  .service-section {
-    min-height: 700px;
-  }
+ 
 
   .service-head h1,
   .stats-head h1 {
